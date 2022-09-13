@@ -1,0 +1,17 @@
+<p class="text-center">data works!</p>
+<table class="" style="width:100%; background-color:white">
+        <thead >
+            <th>UserId</th>
+            <th>Title</th>
+            <th>Completed</th>
+            <th>id</th>
+        </thead>
+    <tbody *ngFor="let x of user"  >
+        <td>{{x.userId}}</td>
+        <td>{{x.title}}</td>
+        <td>{{x.completed}}</td>
+        <td>{{x.id}}</td>
+
+    </tbody>
+
+</table>

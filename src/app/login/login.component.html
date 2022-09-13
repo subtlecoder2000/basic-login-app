@@ -1,0 +1,28 @@
+<div id = "login-form">
+    <form name = "form1" [formGroup]="form1" method = "post" action = "login.php" (ngSubmit) = "onSubmit()" id = "form1">
+        <table>
+            <tr>
+                <td class = "form1_label">User Name : </td><td><input type = "text" name = "username" formControlName = "userName"  value=""/>
+                </td>
+            </tr>
+            <tr>
+                <td class = "form1_label">Password :  </td><td><input type = "password" formControlName = "password" name = "password" value = "" /> 
+                </td>
+            </tr>
+            <tr>
+                <td> 
+                    <button type ="submit" > Submit</button>
+                    <!-- [disabled]="(this.form1.value.userName.length == 0 || this.form1.value.password.length == 0)" -->
+                </td>
+            </tr>
+        </table>
+        <div *ngIf = "isValid">
+            <b>incoirrect details</b>
+
+        </div>
+        <div *ngIf = "notValid">
+            <b>username or passowrd field empty</b>
+
+        </div>
+       </form>
+</div>
